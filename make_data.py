@@ -2,7 +2,7 @@ import numpy
 import matplotlib.pyplot as plt
 import json
 
-timeframe = "old"
+timeframe = "new"
 
 if timeframe=="old":
     jsondata = {
@@ -25,7 +25,8 @@ if timeframe=="old":
       "url3": "https://raw.githubusercontent.com/Phil-Acc/DamageReporter/master/picture0.png",
       "url4": "https://raw.githubusercontent.com/Phil-Acc/DamageReporter/master/map2.png",
       "url5": "https://raw.githubusercontent.com/Phil-Acc/DamageReporter/master/map1.png",
-      "url6": "https://raw.githubusercontent.com/Phil-Acc/DamageReporter/master/map0.png"
+      "url6": "https://raw.githubusercontent.com/Phil-Acc/DamageReporter/master/map0.png",
+      "bardiagram": "https://raw.githubusercontent.com/Phil-Acc/DamageReporter/master/bardiagram.png"
     }
 
 else:
@@ -49,7 +50,8 @@ else:
       "url3": "https://raw.githubusercontent.com/Phil-Acc/DamageReporter/master/picture1.png",
       "url4": "https://raw.githubusercontent.com/Phil-Acc/DamageReporter/master/map3.png",
       "url5": "https://raw.githubusercontent.com/Phil-Acc/DamageReporter/master/map2.png",
-      "url6": "https://raw.githubusercontent.com/Phil-Acc/DamageReporter/master/map1.png"
+      "url6": "https://raw.githubusercontent.com/Phil-Acc/DamageReporter/master/map1.png",
+      "bardiagram": "https://raw.githubusercontent.com/Phil-Acc/DamageReporter/master/bardiagram.png"
     }  
     
 with open('data.json', 'w') as outfile:
@@ -59,4 +61,3 @@ plt.barh(list(jsondata["tickets_by_cat"].keys()), list(jsondata["tickets_by_cat"
 plt.xlabel("Active Cases")
 plt.tight_layout()
 plt.savefig("bardiagram.png", dpi=300)
-plt.show()
