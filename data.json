@@ -1,0 +1,17 @@
+{
+  "total_tickets": 3
+  "tickets_by_cat": 
+	{
+      "D00": 13,
+      "D01": 19,
+      "D10": 22,
+	  "D11": 1,
+	  "D20": 5,
+	  "D40": 28,
+	  "D43": 14,
+	  "D44": 8,
+	  "garbage bag": 40,
+	  "cardboard": 23
+    }
+  "latest_url": ""
+}
