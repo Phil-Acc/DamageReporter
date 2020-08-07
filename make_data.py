@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 import json
 
-timeframe = "old"
+timeframe = "new"
 
 if timeframe=="old":
     jsondata = {
@@ -67,3 +67,30 @@ ax.set_ylabel("Active Cases")
 ax.set_facecolor('#2a2a2a')
 plt.tight_layout()
 plt.savefig("bardiagram.png", dpi=300, facecolor='#2a2a2a')
+
+'''
+steps = 8
+total = [0]
+active = [0]
+solved = [0]
+for i in range(steps):
+    solved.append(solved[-1]+numpy.max([int(numpy.random.normal(450/steps, 30)),0]))
+    active.append(active[-1]+int(numpy.random.normal(180/steps, 50)))
+    total.append(solved[-1]+active[-1])
+
+
+plt.style.use('dark_background')
+plt.rcParams['figure.facecolor'] = '#2a2a2a'
+fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(7.61,3))
+fig.patch.set_facecolor('#2a2a2a')
+ax.plot(total, label="Total Cases")
+ax.plot(active, label="Active Cases")
+ax.plot(solved, label="Solved Cases")
+ax.set_ylabel("Cases")
+ax.set_xlabel("Time (weeks)")
+ax.set_facecolor('#2a2a2a')
+plt.tight_layout()
+plt.legend(facecolor='#2a2a2a')
+plt.savefig("timetrace.png", dpi=300, facecolor='#2a2a2a')
+plt.show()
+'''
