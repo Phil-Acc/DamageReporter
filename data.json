@@ -1,5 +1,5 @@
 {
-  "total_tickets": 3
+  "total_tickets": 3,
   "tickets_by_cat": 
 	{
       "D00": 13,
@@ -12,6 +12,6 @@
 	  "D44": 8,
 	  "garbage bag": 40,
 	  "cardboard": 23
-    }
+    },
   "latest_url": ""
 }
